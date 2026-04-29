@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sabr Medical Center | Premium Care in East Riffa, Bahrain</title>
+  <meta name="description"
+    content="Sabr Medical Center — Premium medical services in East Riffa, Bahrain. Expert specialists in General Medicine, Dental Care, Pediatrics, Dermatology, OB/GYN, and Laboratory services." />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#fcf9f5",
+            "on-background": "#1c1c1a",
+            "primary": "#006357",
+            "primary-container": "#2a7c6f",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#cbfff3",
+            "secondary": "#745a27",
+            "secondary-container": "#fedb9b",
+            "on-secondary": "#ffffff",
+            "teal-light": "#E8F4F2",
+            "teal-mid": "#4A9D90",
+            "gold-light": "#F5EDD9",
+            "gold-dark": "#9E7D45",
+            "surface": "#fcf9f5",
+            "surface-container": "#f0edea",
+            "surface-container-low": "#f6f3ef",
+            "surface-container-lowest": "#ffffff",
+            "surface-variant": "#e5e2de",
+            "surface-dim": "#dcdad6",
+            "on-surface": "#1c1c1a",
+            "on-surface-variant": "#3f4946",
+            "border-light": "#E8E3DB",
+            "border-strong": "#D4CEC5",
+            "outline": "#6f7976",
+            "muted": "#6B6860",
+            "warn": "#B07820",
+            "error": "#ba1a1a",
+            "success": "#3A7C5A",
+            "danger": "#C0503A",
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px",
+          },
+          spacing: {
+            "xs": "4px",
+            "sm": "8px",
+            "md": "16px",
+            "lg": "24px",
+            "xl": "32px",
+            "2xl": "48px",
+            "3xl": "64px",
+          },
+          fontFamily: {
+            "display": ["Cormorant Garamond", "Georgia", "serif"],
+            "h1": ["Cormorant Garamond", "Georgia", "serif"],
+            "h2": ["Cormorant Garamond", "Georgia", "serif"],
+            "h3": ["Cormorant Garamond", "Georgia", "serif"],
+            "lead": ["DM Sans", "system-ui", "sans-serif"],
+            "body": ["DM Sans", "system-ui", "sans-serif"],
+            "label": ["DM Sans", "system-ui", "sans-serif"],
+            "caption": ["DM Sans", "system-ui", "sans-serif"],
+          },
+          fontSize: {
+            "display": ["clamp(36px,8vw,72px)", { lineHeight: "1.05", letterSpacing: "-0.025em", fontWeight: "500" }],
+            "h1": ["clamp(28px,7vw,52px)", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "500" }],
+            "h2": ["clamp(24px,6vw,36px)", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "500" }],
+            "h3": ["clamp(18px,5vw,26px)", { lineHeight: "1.3", fontWeight: "500" }],
+            "lead": ["clamp(16px,4vw,18px)", { lineHeight: "1.65", fontWeight: "300" }],
+            "body": ["16px", { lineHeight: "1.75", fontWeight: "400" }],
+            "label": ["12px", { lineHeight: "1.2", letterSpacing: "0.1em", fontWeight: "600" }],
+            "caption": ["13px", { lineHeight: "1.4", fontWeight: "400" }],
+          },
+          maxWidth: {
+            "container": "900px",
+          }
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* ── Scroll animations ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      filter: blur(10px);
+      transition:
+        opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        filter 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+
+    .d-100 {
+      transition-delay: 0.1s;
+    }
+
+    .d-200 {
+      transition-delay: 0.2s;
+    }
+
+    .d-300 {
+      transition-delay: 0.3s;
+    }
+
+    .d-400 {
+      transition-delay: 0.4s;
+    }
+
+    .d-500 {
+      transition-delay: 0.5s;
+    }
+
+    .d-600 {
+      transition-delay: 0.6s;
+    }
+
+    /* ── Hero headline word animation ── */
+    @keyframes wordReveal {
+      0% {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateY(40px);
+      }
+
+      55% {
+        opacity: 0.6;
+        filter: blur(4px);
+        transform: translateY(-4px);
+      }
+
+      100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+      }
+    }
+
+    .word {
+      display: inline-block;
+      margin-right: 0.25em;
+      animation: wordReveal 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+
+    /* ── Line reveal ── */
+    @keyframes lineReveal {
+      from {
+        transform: scaleX(0);
+      }
+
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    .line-reveal {
+      transform-origin: left;
+      animation: lineReveal 0.9s cubic-bezier(0.76, 0, 0.24, 1) 0.4s both;
+    }
+
+    /* ── Card hover lift ── */
+    .card-lift {
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .card-lift:hover {
+      transform: translateY(-6px) scale(1.016);
+      box-shadow: 0 16px 40px rgba(0, 99, 87, 0.12);
+    }
+
+    /* ── Button animations ── */
+    .btn {
+      transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.15s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: scale(1.04);
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-solid:hover {
+      box-shadow: 0 6px 24px rgba(0, 99, 87, 0.28);
+    }
+
+    /* ── Nav underline ── */
+    .nav-link {
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #006357;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      transform: scaleX(1);
+    }
+
+    /* ── Mobile menu ── */
+    #mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        opacity 0.3s ease;
+    }
+
+    #mobile-menu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .ham-line {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #1c1c1a;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    #hamburger.open .ham-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    #hamburger.open .ham-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    #hamburger.open .ham-line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* ── Modal ── */
+    #booking-modal {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    #booking-modal.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    #modal-box {
+      transform: scale(0.92) translateY(12px);
+      filter: blur(8px);
+      opacity: 0;
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+        filter 0.35s ease,
+        opacity 0.35s ease;
+    }
+
+    #booking-modal.open #modal-box {
+      transform: scale(1) translateY(0);
+      filter: blur(0);
+      opacity: 1;
+    }
+
+    /* ── Toast ── */
+    #toast {
+      transform: translateY(80px);
+      opacity: 0;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    #toast.show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /* ── Form inputs ── */
+    .field {
+      width: 100%;
+      border: 1px solid #D4CEC5;
+      border-radius: 0.5rem;
+      background: #fcf9f5;
+      padding: 10px 16px;
+      font-family: "DM Sans", sans-serif;
+      font-size: 15px;
+      color: #1c1c1a;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      outline: none;
+      appearance: auto;
+    }
+
+    .field:focus {
+      border-color: #006357;
+      box-shadow: 0 0 0 3px rgba(232, 244, 242, 0.9);
+    }
+
+    .field.error {
+      border-color: #ba1a1a;
+    }
+
+    /* ── Doctor card ── */
+    .doctor-img {
+      transition: filter 0.5s ease;
+    }
+
+    .doctor-card:hover .doctor-img {
+      filter: grayscale(0%) !important;
+    }
+
+    .doctor-overlay {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .doctor-card:hover .doctor-overlay {
+      opacity: 1;
+    }
+
+    /* ── Image entrance ── */
+    .img-enter {
+      filter: blur(10px);
+      transform: scale(0.96);
+      transition: filter 0.7s ease, transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .img-enter.loaded {
+      filter: blur(0);
+      transform: scale(1);
+    }
+
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition: none;
+      }
+
+      .word {
+        animation: none;
+        opacity: 1;
+        filter: none;
+        transform: none;
+      }
+
+      .line-reveal {
+        animation: none;
+        transform: scaleX(1);
+      }
+
+      .card-lift:hover {
+        transform: none;
+        box-shadow: none;
+      }
+
+      .btn:hover {
+        transform: none;
+      }
+
+      .btn:active {
+        transform: none;
+      }
+
+      .img-enter {
+        filter: none;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #fcf9f5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #D4CEC5;
+      border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #006357;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background relative text-on-background font-body antialiased selection:bg-teal-mid selection:text-white">
+  <!-- Innova Aesthetic Background Blobs -->
+  <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+    <div class="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-teal-light/60 blur-[100px]"></div>
+    <div
+      class="absolute bottom-[-10%] right-[-10%] w-[70vw] h-[70vw] rounded-full bg-secondary-container/30 blur-[120px]">
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+     BOOKING MODAL
+════════════════════════════════════════ -->
+  <div id="booking-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4"
+    style="background: rgba(28,28,26,0.55); backdrop-filter: blur(6px);" role="dialog" aria-modal="true"
+    aria-labelledby="modal-title">
+    <div id="modal-box"
+      class="bg-white/80 backdrop-blur-2xl border border-white/60 rounded-3xl shadow-[0_16px_40px_rgb(0,0,0,0.1)] w-full max-w-lg max-h-[92vh] overflow-y-auto">
+      <!-- Modal header -->
+      <div
+        class="sticky top-0 bg-white/80 backdrop-blur-2xl border-b border-white/40 px-6 pt-6 pb-4 flex items-start justify-between rounded-t-3xl z-10">
+        <div>
+          <h3 id="modal-title" class="font-h2 text-h2 leading-tight">Book an Appointment</h3>
+          <p class="font-body text-body text-muted mt-1">Fill in your details — we'll confirm shortly.</p>
+        </div>
+        <button id="close-modal" aria-label="Close"
+          class="btn ml-4 mt-1 w-9 h-9 rounded-full flex items-center justify-center hover:bg-surface-container shrink-0">
+          <span class="material-symbols-outlined text-muted text-[20px]">close</span>
+        </button>
+      </div>
+
+      <!-- Modal form -->
+      <form id="booking-form" class="px-6 pt-5 pb-6 space-y-4" novalidate>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="font-label block mb-1 text-muted uppercase tracking-widest text-[10px]">Full Name *</label>
+            <input type="text" name="name" id="b-name" placeholder="Your full name" class="field" required />
+            <p class="field-err hidden text-error font-caption text-[11px] mt-1">Required</p>
+          </div>
+          <div>
+            <label class="font-label block mb-1 text-muted uppercase tracking-widest text-[10px]">Phone *</label>
+            <input type="tel" name="phone" id="b-phone" placeholder="+973 XXXX XXXX" class="field" required />
+            <p class="field-err hidden text-error font-caption text-[11px] mt-1">Required</p>
+          </div>
+        </div>
+        <div>
+          <label class="font-label block mb-1 text-muted uppercase tracking-widest text-[10px]">Email</label>
+          <input type="email" name="email" placeholder="your@email.com" class="field" />
+        </div>
+        <div>
+          <label class="font-label block mb-1 text-muted uppercase tracking-widest text-[10px]">Department *</label>
+          <select name="department" id="b-dept" class="field" required>
+            <option value="">Select a department</option>
+            <option>General Medicine</option>
+            <option>Dental Care</option>
+            <option>Pediatrics</option>
+            <option>Dermatology</option>
+            <option>OB/GYN</option>
+            <option>Laboratory</option>
+          </select>
+          <p class="field-err hidden text-error font-caption text-[11px] mt-1">Please select a department</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="font-label block mb-1 text-muted uppercase tracking-widest text-[10px]">Preferred Date</label>
+            <input type="date" name="date" class="field" />
+          </div>
+          <div>
+            <label class="font-label block mb-1 text-muted uppercase tracking-widest text-[10px]">Preferred Time</label>
+            <select name="time" class="field">
+              <option value="">Any time</option>
+              <option>8:00 AM – 10:00 AM</option>
+              <option>10:00 AM – 12:00 PM</option>
+              <option>12:00 PM – 2:00 PM</option>
+              <option>2:00 PM – 4:00 PM</option>
+              <option>4:00 PM – 6:00 PM</option>
+              <option>6:00 PM – 8:00 PM</option>
+              <option>8:00 PM – 10:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="font-label block mb-1 text-muted uppercase tracking-widest text-[10px]">Notes</label>
+          <textarea name="notes" id="b-notes" rows="3" placeholder="Any specific concerns for our team…"
+            class="field resize-none"></textarea>
+        </div>
+        <button type="submit"
+          class="btn btn-solid w-full bg-primary text-on-primary font-label py-3 rounded-xl shadow-sm tracking-widest uppercase text-[12px]">
+          Confirm Booking Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+     TOAST
+════════════════════════════════════════ -->
+  <div id="toast"
+    class="fixed bottom-6 right-4 z-[200] flex items-center gap-3 bg-success text-white px-5 py-3.5 rounded-xl shadow-2xl">
+    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings:'FILL' 1;">check_circle</span>
+    <span id="toast-msg" class="font-body font-medium text-sm leading-snug"></span>
+    <button onclick="hideToast()"
+      class="btn ml-1 w-6 h-6 flex items-center justify-center rounded-full hover:bg-white/20" aria-label="Dismiss">
+      <span class="material-symbols-outlined text-[14px]">close</span>
+    </button>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════ -->
+  <header id="navbar"
+    class="sticky top-0 z-50 w-full bg-white/70 backdrop-blur-2xl border-b border-white/50 transition-all duration-300">
+    <nav class="max-w-container mx-auto px-6 h-20 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-2.5 group" aria-label="Sabr Medical Center home">
+        <div
+          class="w-9 h-9 bg-primary rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
+          <span class="material-symbols-outlined text-white text-[20px]"
+            style="font-variation-settings:'FILL' 1;">medical_services</span>
+        </div>
+        <span class="font-display font-bold text-primary text-[19px] tracking-tight leading-none">Sabr Medical</span>
+      </a>
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-7">
+        <a href="#home"
+          class="nav-link active font-display font-semibold text-primary  text-[15px] tracking-tight transition-colors">Home</a>
+        <a href="#services"
+          class="nav-link font-display font-semibold text-muted text-[15px] tracking-tight hover:text-primary transition-colors">Specialties</a>
+        <a href="#doctors"
+          class="nav-link font-display font-semibold text-muted text-[15px] tracking-tight hover:text-primary transition-colors">Doctors</a>
+        <a href="#about"
+          class="nav-link font-display font-semibold text-muted text-[15px] tracking-tight hover:text-primary transition-colors">About</a>
+        <a href="#contact"
+          class="nav-link font-display font-semibold text-muted text-[15px] tracking-tight hover:text-primary transition-colors">Contact</a>
+      </div>
+
+      <!-- Desktop CTA -->
+      <button onclick="openModal()"
+        class="btn btn-solid hidden md:flex items-center gap-1.5 bg-primary text-on-primary font-label text-[11px] px-md py-2.5 rounded-xl shadow-sm tracking-widest uppercase">
+        <span class="material-symbols-outlined text-[16px]">calendar_month</span>
+        Book Appointment
+      </button>
+
+      <!-- Hamburger -->
+      <button id="hamburger"
+        class="btn md:hidden w-11 h-11 flex flex-col items-center justify-center gap-[6px] rounded-xl hover:bg-surface-container"
+        aria-label="Toggle menu" aria-expanded="false">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden border-t border-white/50 bg-white/85 backdrop-blur-xl">
+      <div class="px-5 py-3 space-y-1">
+        <a href="#home" onclick="closeMobile()"
+          class="block py-3 px-3 rounded-xl font-display font-semibold text-primary hover:bg-teal-light transition-colors">Home</a>
+        <a href="#services" onclick="closeMobile()"
+          class="block py-3 px-3 rounded-xl font-display font-semibold text-muted hover:text-primary hover:bg-teal-light transition-colors">Specialties</a>
+        <a href="#doctors" onclick="closeMobile()"
+          class="block py-3 px-3 rounded-xl font-display font-semibold text-muted hover:text-primary hover:bg-teal-light transition-colors">Doctors</a>
+        <a href="#about" onclick="closeMobile()"
+          class="block py-3 px-3 rounded-xl font-display font-semibold text-muted hover:text-primary hover:bg-teal-light transition-colors">About</a>
+        <a href="#contact" onclick="closeMobile()"
+          class="block py-3 px-3 rounded-xl font-display font-semibold text-muted hover:text-primary hover:bg-teal-light transition-colors">Contact</a>
+        <div class="pt-2 pb-1">
+          <button onclick="openModal(); closeMobile();"
+            class="btn btn-solid w-full bg-primary text-on-primary font-label text-[12px] py-3 rounded-xl shadow-sm tracking-widest uppercase">
+            Book Appointment
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════
+     MAIN
+════════════════════════════════════════ -->
+  <main class="max-w-container mx-auto px-6">
+
+    <!-- ── HERO ── -->
+    <section id="home" class="py-3xl flex flex-col md:flex-row gap-2xl items-center">
+      <div class="flex-1 space-y-md">
+        <div class="fade-up">
+          <span
+            class="inline-flex items-center gap-1.5 font-label text-primary tracking-widest uppercase bg-teal-light px-sm py-xs rounded-full text-[11px]">
+            <span class="material-symbols-outlined text-[14px]"
+              style="font-variation-settings:'FILL' 1;">location_on</span>
+            East Riffa, Bahrain
+          </span>
+        </div>
+
+        <h1 class="font-h1 text-h1 text-on-background leading-tight">
+          <div class="flex flex-wrap" style="row-gap:0.05em">
+            <span class="word" style="animation-delay:0.10s">Your</span>
+            <span class="word" style="animation-delay:0.20s">Health,</span>
+          </div>
+          <div class="flex flex-wrap" style="row-gap:0.05em">
+            <span class="word italic text-primary" style="animation-delay:0.33s">Our</span>
+            <span class="word italic text-primary" style="animation-delay:0.44s">Commitment</span>
+          </div>
+        </h1>
+
+        <p class="fade-up d-300 font-lead text-lead text-muted max-w-md">
+          Providing premium medical services with a focus on patient comfort and advanced clinical excellence in the
+          heart of East Riffa.
+        </p>
+
+        <div class="fade-up d-400 flex flex-wrap gap-md pt-sm">
+          <button onclick="openModal()"
+            class="btn btn-solid bg-primary text-on-primary font-label px-xl py-md rounded-xl shadow-sm tracking-widest uppercase text-[12px]">
+            Book an Appointment
+          </button>
+          <a href="#services"
+            class="btn flex items-center gap-1.5 border border-primary text-primary font-label px-xl py-md rounded-xl hover:bg-teal-light tracking-widest uppercase text-[12px]">
+            View Services
+            <span class="material-symbols-outlined text-[16px]">keyboard_arrow_down</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero image -->
+      <div class="flex-1 relative w-full md:w-auto fade-up d-200 mt-8 md:mt-0">
+        <div
+          class="aspect-[4/5] sm:aspect-square md:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/60">
+          <img class="img-enter w-full h-full object-cover" onload="this.classList.add('loaded')"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB63tfQrbB5j4PSjf3Rln-fGR-yKWqOUJOkfbYYNxyUslTjoNXH4if6fbmbdpVCYG7iWl1RvjqerdgODxzBmopGX4_yD2dAoaJettTZEAdcrGfXSP9oWskwy4cgCV3-uuVrTK4tavw0pqXGlhBoKLPOUT9qA7z5fKyWz5Lsa4m5sB5eiCDzdgAr1SeA6jtyTuz8wN27rqI3wG7jRotSXbVsLuDS-6t7cmuG8U3EF6egYPRHouZWoHXnYdxhQWDB-6HGiGYxsK75Ah4"
+            alt="Modern high-end medical clinic interior with soft warm lighting, ivory walls, and minimalist sage teal accents" />
+        </div>
+        <!-- Floating badge -->
+        <div
+          class="absolute -bottom-4 -left-3 bg-white p-md rounded-xl shadow-lg border border-border-light flex items-center gap-sm animate-bounce-slow">
+          <div class="bg-secondary-container p-xs rounded-full">
+            <span class="material-symbols-outlined text-secondary text-[22px]"
+              style="font-variation-settings:'FILL' 1;">medical_services</span>
+          </div>
+          <div>
+            <p class="font-h3 text-h3 leading-none font-bold">10+</p>
+            <p class="font-caption text-caption text-muted">Specialties</p>
+          </div>
+        </div>
+        <!-- Trust badge -->
+        <div
+          class="absolute -top-3 -right-3 bg-primary text-on-primary px-sm py-xs rounded-full shadow-md flex items-center gap-1">
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings:'FILL' 1;">verified</span>
+          <span class="font-label text-[10px] tracking-wider uppercase">Trusted</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── STATS STRIP ── -->
+    <section
+      class="py-xl border-y border-white/50 bg-white/40 backdrop-blur-md grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4 rounded-2xl my-4">
+      <div class="fade-up d-100 flex items-center gap-sm px-sm">
+        <div class="w-9 h-9 bg-teal-light rounded-lg flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-primary text-[20px]">clinical_notes</span>
+        </div>
+        <span class="font-label text-on-surface text-[10px] tracking-widest uppercase">Expert Specialists</span>
+      </div>
+      <div class="fade-up d-200 flex items-center gap-sm px-sm">
+        <div class="w-9 h-9 bg-teal-light rounded-lg flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+        </div>
+        <span class="font-label text-on-surface text-[10px] tracking-widest uppercase">Affordable Packages</span>
+      </div>
+      <div class="fade-up d-300 flex items-center gap-sm px-sm">
+        <div class="w-9 h-9 bg-teal-light rounded-lg flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-primary text-[20px]">biotech</span>
+        </div>
+        <span class="font-label text-on-surface text-[10px] tracking-widest uppercase">State-of-the-Art</span>
+      </div>
+      <div class="fade-up d-400 flex items-center gap-sm px-sm">
+        <div class="w-9 h-9 bg-teal-light rounded-lg flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-primary text-[20px]"
+            style="font-variation-settings:'FILL' 1;">verified</span>
+        </div>
+        <span class="font-label text-on-surface text-[10px] tracking-widest uppercase">East Riffa's Trusted</span>
+      </div>
+    </section>
+
+    <!-- ── SERVICES GRID ── -->
+    <section id="services" class="py-3xl">
+      <div class="text-center mb-2xl fade-up">
+        <p class="font-label text-primary tracking-widest uppercase text-[11px] mb-sm">What We Offer</p>
+        <h2 class="font-h2 text-h2 mb-sm">Our Medical Services</h2>
+        <div class="w-14 h-[3px] bg-primary mx-auto rounded-full line-reveal"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-lg">
+        <!-- Card template: each service opens booking modal with pre-filled department -->
+        <div
+          class="card-lift fade-up d-100 bg-white/70 backdrop-blur-xl p-xl rounded-3xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-primary/30 group cursor-pointer"
+          onclick="openModal('General Medicine')" tabindex="0" role="button"
+          aria-label="Book General Medicine appointment">
+          <div
+            class="w-12 h-12 bg-teal-light rounded-xl flex items-center justify-center mb-md group-hover:bg-primary transition-colors">
+            <span
+              class="material-symbols-outlined text-primary group-hover:text-white text-[26px] transition-colors">stethoscope</span>
+          </div>
+          <h3 class="font-h3 text-h3 mb-sm">General Medicine</h3>
+          <p class="font-body text-body text-muted mb-md">Comprehensive primary healthcare and routine check-ups for all
+            ages.</p>
+          <span
+            class="font-label text-primary flex items-center gap-xs group-hover:gap-sm transition-all text-[11px] tracking-widest uppercase">
+            Book Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+          </span>
+        </div>
+
+        <div
+          class="card-lift fade-up d-200 bg-white/70 backdrop-blur-xl p-xl rounded-3xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-primary/30 group cursor-pointer"
+          onclick="openModal('Dental Care')" tabindex="0" role="button" aria-label="Book Dental Care appointment">
+          <div
+            class="w-12 h-12 bg-teal-light rounded-xl flex items-center justify-center mb-md group-hover:bg-primary transition-colors">
+            <span
+              class="material-symbols-outlined text-primary group-hover:text-white text-[26px] transition-colors">dentistry</span>
+          </div>
+          <h3 class="font-h3 text-h3 mb-sm">Dental Care</h3>
+          <p class="font-body text-body text-muted mb-md">Advanced aesthetic and clinical dentistry for a radiant,
+            healthy smile.</p>
+          <span
+            class="font-label text-primary flex items-center gap-xs group-hover:gap-sm transition-all text-[11px] tracking-widest uppercase">
+            Book Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+          </span>
+        </div>
+
+        <div
+          class="card-lift fade-up d-300 bg-white/70 backdrop-blur-xl p-xl rounded-3xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-primary/30 group cursor-pointer"
+          onclick="openModal('Pediatrics')" tabindex="0" role="button" aria-label="Book Pediatrics appointment">
+          <div
+            class="w-12 h-12 bg-teal-light rounded-xl flex items-center justify-center mb-md group-hover:bg-primary transition-colors">
+            <span
+              class="material-symbols-outlined text-primary group-hover:text-white text-[26px] transition-colors">child_care</span>
+          </div>
+          <h3 class="font-h3 text-h3 mb-sm">Pediatrics</h3>
+          <p class="font-body text-body text-muted mb-md">Specialized and gentle healthcare dedicated to your child's
+            growth.</p>
+          <span
+            class="font-label text-primary flex items-center gap-xs group-hover:gap-sm transition-all text-[11px] tracking-widest uppercase">
+            Book Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+          </span>
+        </div>
+
+        <div
+          class="card-lift fade-up d-100 bg-white/70 backdrop-blur-xl p-xl rounded-3xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-primary/30 group cursor-pointer"
+          onclick="openModal('Dermatology')" tabindex="0" role="button" aria-label="Book Dermatology appointment">
+          <div
+            class="w-12 h-12 bg-teal-light rounded-xl flex items-center justify-center mb-md group-hover:bg-primary transition-colors">
+            <span
+              class="material-symbols-outlined text-primary group-hover:text-white text-[26px] transition-colors">face</span>
+          </div>
+          <h3 class="font-h3 text-h3 mb-sm">Dermatology</h3>
+          <p class="font-body text-body text-muted mb-md">Medical and cosmetic skin treatments focused on health and
+            clarity.</p>
+          <span
+            class="font-label text-primary flex items-center gap-xs group-hover:gap-sm transition-all text-[11px] tracking-widest uppercase">
+            Book Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+          </span>
+        </div>
+
+        <div
+          class="card-lift fade-up d-200 bg-white/70 backdrop-blur-xl p-xl rounded-3xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-primary/30 group cursor-pointer"
+          onclick="openModal('OB/GYN')" tabindex="0" role="button" aria-label="Book OB/GYN appointment">
+          <div
+            class="w-12 h-12 bg-teal-light rounded-xl flex items-center justify-center mb-md group-hover:bg-primary transition-colors">
+            <span
+              class="material-symbols-outlined text-primary group-hover:text-white text-[26px] transition-colors">female</span>
+          </div>
+          <h3 class="font-h3 text-h3 mb-sm">OB/GYN</h3>
+          <p class="font-body text-body text-muted mb-md">Empathetic and expert women's health and maternity services.
+          </p>
+          <span
+            class="font-label text-primary flex items-center gap-xs group-hover:gap-sm transition-all text-[11px] tracking-widest uppercase">
+            Book Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+          </span>
+        </div>
+
+        <div
+          class="card-lift fade-up d-300 bg-white/70 backdrop-blur-xl p-xl rounded-3xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-primary/30 group cursor-pointer"
+          onclick="openModal('Laboratory')" tabindex="0" role="button" aria-label="Book Laboratory appointment">
+          <div
+            class="w-12 h-12 bg-teal-light rounded-xl flex items-center justify-center mb-md group-hover:bg-primary transition-colors">
+            <span
+              class="material-symbols-outlined text-primary group-hover:text-white text-[26px] transition-colors">biotech</span>
+          </div>
+          <h3 class="font-h3 text-h3 mb-sm">Laboratory</h3>
+          <p class="font-body text-body text-muted mb-md">Fast and accurate diagnostic testing with state-of-the-art
+            technology.</p>
+          <span
+            class="font-label text-primary flex items-center gap-xs group-hover:gap-sm transition-all text-[11px] tracking-widest uppercase">
+            Book Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHY CHOOSE US ── -->
+    <section id="about" class="py-3xl grid grid-cols-1 md:grid-cols-2 gap-2xl items-center">
+      <div class="fade-up rounded-2xl overflow-hidden shadow-md max-h-[500px]">
+        <img class="img-enter w-full h-full object-cover" onload="this.classList.add('loaded')"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlLM4GjNtth-79qI5EL6iL_aJGV5Q0zdX2C-ze7YoYnDOEGCcsVe7Te6MVpl4GHJxnsKb2ls9gAIXJFyWrhlUxf8uaoRUMEroXG65VfUfVZRzXlsytl4-Mweyo7Vs9Hp8inaYZWqnZB8Z7soWWGBh1NH1utS2zoduETSD4v9vfOZb5_-COAAi-z8T2OAyxHAl6LM_RWbUw-yBnF6XRnRdw2WzkRokSPcKc7ZbFQeJGGtbjflrmINWEqW9WWEfIayaZvr9JuByOO4k"
+          alt="Doctor smiling warmly while consulting with a patient" />
+      </div>
+      <div class="space-y-xl">
+        <div class="fade-up">
+          <p class="font-label text-primary tracking-widest uppercase text-[11px] mb-sm">Why Choose Us</p>
+          <h2 class="font-h2 text-h2">Why Patients Choose <em class="font-display">Sabr Medical</em></h2>
+        </div>
+        <div class="space-y-md">
+          <div class="fade-up d-100 flex gap-md items-start">
+            <div class="bg-teal-light p-xs rounded-full mt-0.5 shrink-0">
+              <span class="material-symbols-outlined text-primary text-[20px]"
+                style="font-variation-settings:'FILL' 1;">check_circle</span>
+            </div>
+            <div>
+              <h4 class="font-lead text-primary font-semibold">Expert Doctors</h4>
+              <p class="font-body text-muted text-sm mt-0.5">Board-certified specialists with international clinical
+                expertise.</p>
+            </div>
+          </div>
+          <div class="fade-up d-200 flex gap-md items-start">
+            <div class="bg-teal-light p-xs rounded-full mt-0.5 shrink-0">
+              <span class="material-symbols-outlined text-primary text-[20px]"
+                style="font-variation-settings:'FILL' 1;">check_circle</span>
+            </div>
+            <div>
+              <h4 class="font-lead text-primary font-semibold">Tailored Care Packages</h4>
+              <p class="font-body text-muted text-sm mt-0.5">Specially designed health check-up packages for the whole
+                family.</p>
+            </div>
+          </div>
+          <div class="fade-up d-300 flex gap-md items-start">
+            <div class="bg-teal-light p-xs rounded-full mt-0.5 shrink-0">
+              <span class="material-symbols-outlined text-primary text-[20px]"
+                style="font-variation-settings:'FILL' 1;">check_circle</span>
+            </div>
+            <div>
+              <h4 class="font-lead text-primary font-semibold">Advanced Equipment</h4>
+              <p class="font-body text-muted text-sm mt-0.5">Utilizing modern medical technology for precise diagnosis
+                and treatment.</p>
+            </div>
+          </div>
+          <div class="fade-up d-400 flex gap-md items-start">
+            <div class="bg-teal-light p-xs rounded-full mt-0.5 shrink-0">
+              <span class="material-symbols-outlined text-primary text-[20px]"
+                style="font-variation-settings:'FILL' 1;">check_circle</span>
+            </div>
+            <div>
+              <h4 class="font-lead text-primary font-semibold">Central Location</h4>
+              <p class="font-body text-muted text-sm mt-0.5">Beside Nesto Supermarket, East Riffa — easy access with
+                ample parking.</p>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up d-500">
+          <button onclick="openModal()"
+            class="btn btn-solid bg-primary text-on-primary font-label px-xl py-md rounded-xl shadow-sm tracking-widest uppercase text-[12px]">
+            Schedule a Visit
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── DOCTORS ── -->
+    <section id="doctors" class="py-3xl">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-xl gap-md fade-up">
+        <div>
+          <p class="font-label text-primary tracking-widest uppercase text-[11px] mb-sm">Our Team</p>
+          <h2 class="font-h2 text-h2">Our Specialists</h2>
+          <p class="font-body text-muted mt-1">A dedicated team committed to your wellbeing.</p>
+        </div>
+        <button onclick="openModal()"
+          class="btn font-label text-primary text-[11px] tracking-widest uppercase underline underline-offset-4 decoration-border-strong hover:decoration-primary transition-all shrink-0">
+          Book with a Doctor
+        </button>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-md sm:gap-lg">
+        <!-- Dr 1 -->
+        <div class="doctor-card fade-up d-100 text-center cursor-pointer"
+          onclick="openModal('General Medicine', 'Dr. Ahmed Salman')" tabindex="0" role="button"
+          aria-label="Book with Dr. Ahmed Salman">
+          <div
+            class="aspect-square bg-surface-container rounded-xl mb-sm overflow-hidden relative border border-border-light">
+            <img class="doctor-img img-enter w-full h-full object-cover grayscale" onload="this.classList.add('loaded')"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHL0LLWvuTqsBB-7WHhLdjofbpdhhI1Dpaj-TZ3rwWzxLYIZv0SU-yDbZyaIlVS12eZHCtiIq-am0RZ8oDmsOXoW1xWQ21T4I4UJqyWRetXOKgDkczJynyl6PNm4mnAB43MttYz1rdVAijn9WTQ-taa_nBSVk_OLOGxVrAyinPbeMMsFCEAubmzY-SZWgnlURT6sGbwVVuDvAx4vSVkSxegEBNX8nk-yQ0ZMC_PMsPv9c2_Rqvuw45x-YKOYP5D9odMdztz71OId8"
+              alt="Dr. Ahmed Salman, Internal Medicine" />
+            <div class="doctor-overlay absolute inset-0 bg-primary/10 flex items-end justify-center pb-3">
+              <span
+                class="bg-white text-primary font-label text-[9px] tracking-widest uppercase px-2.5 py-1 rounded-full shadow">Book</span>
+            </div>
+          </div>
+          <h4 class="font-h3 text-[17px] font-medium leading-snug">Dr. Ahmed Salman</h4>
+          <p class="font-caption text-caption text-muted">Internal Medicine</p>
+        </div>
+
+        <!-- Dr 2 -->
+        <div class="doctor-card fade-up d-200 text-center cursor-pointer"
+          onclick="openModal('Pediatrics', 'Dr. Sarah Al-Sayed')" tabindex="0" role="button"
+          aria-label="Book with Dr. Sarah Al-Sayed">
+          <div
+            class="aspect-square bg-surface-container rounded-xl mb-sm overflow-hidden relative border border-border-light">
+            <img class="doctor-img img-enter w-full h-full object-cover grayscale" onload="this.classList.add('loaded')"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDQ3YXAZisISsq_xtuGjVx4TzDDvN9Jd7xX10vC1jl59DLUAetryzoGEIx52zMxQuzp0ESzxAjtOLgXaoFIJLAw1-zhhnXipnI-zkThhhL0ovKvpS5eUGtpSzARsHIiqCFjINerV0T9Lymp_9gpow1lFI-yHFNn8oNc34Jh1F1thdhWYQ0dpqCvVNoQh0FMOSQO0UVJBVi3Pv9A1QWcYGeRD23H04FutHFHsW-CbQTjv-dTfEYBKsz17mYngUEnou0TQgR3OleBpc"
+              alt="Dr. Sarah Al-Sayed, Pediatrician" />
+            <div class="doctor-overlay absolute inset-0 bg-primary/10 flex items-end justify-center pb-3">
+              <span
+                class="bg-white text-primary font-label text-[9px] tracking-widest uppercase px-2.5 py-1 rounded-full shadow">Book</span>
+            </div>
+          </div>
+          <h4 class="font-h3 text-[17px] font-medium leading-snug">Dr. Sarah Al-Sayed</h4>
+          <p class="font-caption text-caption text-muted">Pediatrician</p>
+        </div>
+
+        <!-- Dr 3 -->
+        <div class="doctor-card fade-up d-300 text-center cursor-pointer"
+          onclick="openModal('Dental Care', 'Dr. Faisal Khalil')" tabindex="0" role="button"
+          aria-label="Book with Dr. Faisal Khalil">
+          <div
+            class="aspect-square bg-surface-container rounded-xl mb-sm overflow-hidden relative border border-border-light">
+            <img class="doctor-img img-enter w-full h-full object-cover grayscale" onload="this.classList.add('loaded')"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIHxR8ID_D7GS3en_vLh_3u97YgMUsikhCHX0YO4XFqeskCh3vpnY0YF6nlo7-o9Zh3ZHVd1aF-QptgNevytDkd4VGoBg-w4vRhqYkRfI8DQGZe18Fihh82GdAAIIPkpBMrBe3BuQIVDJfWIPBjiexv8WKEeod9gfk6xaLFM0C_MlEntzjZTkHXMlOJz0xmE6bbFXjYjRd2gMNmFfDVkYLCBfalBwautI-YnejZTjUAlYXja_kIDKP8hlp2q6LdXoV1RT-yLO72_I"
+              alt="Dr. Faisal Khalil, Dental Surgeon" />
+            <div class="doctor-overlay absolute inset-0 bg-primary/10 flex items-end justify-center pb-3">
+              <span
+                class="bg-white text-primary font-label text-[9px] tracking-widest uppercase px-2.5 py-1 rounded-full shadow">Book</span>
+            </div>
+          </div>
+          <h4 class="font-h3 text-[17px] font-medium leading-snug">Dr. Faisal Khalil</h4>
+          <p class="font-caption text-caption text-muted">Dental Surgeon</p>
+        </div>
+
+        <!-- Dr 4 -->
+        <div class="doctor-card fade-up d-400 text-center cursor-pointer"
+          onclick="openModal('Dermatology', 'Dr. Mariam Isa')" tabindex="0" role="button"
+          aria-label="Book with Dr. Mariam Isa">
+          <div
+            class="aspect-square bg-surface-container rounded-xl mb-sm overflow-hidden relative border border-border-light">
+            <img class="doctor-img img-enter w-full h-full object-cover grayscale" onload="this.classList.add('loaded')"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCobIPAq48WwfuXzUDaWD9pQuaCbFzkxw_c805pyt4Pc863wRS2UozKaXeUcCpY2Qt4fcApVJKDqOCGaGk-ESWQmrpCOfHEmA7mdmJKyjWAE2CLHJ_gcSsK6FmXd32a5tKbF4xj0N9TDNzY9C9yrUYuQclyEdwceeYBG66w0uujEeSsRa-pDTsTKkT_OLcJo16sjXeDkWQewiSx6LD6L_H9_c8591ij30YNXqvedxXxjFstGj44aLDdADrTYrzUpPK5Dpjsq7cS0Aw"
+              alt="Dr. Mariam Isa, Dermatologist" />
+            <div class="doctor-overlay absolute inset-0 bg-primary/10 flex items-end justify-center pb-3">
+              <span
+                class="bg-white text-primary font-label text-[9px] tracking-widest uppercase px-2.5 py-1 rounded-full shadow">Book</span>
+            </div>
+          </div>
+          <h4 class="font-h3 text-[17px] font-medium leading-snug">Dr. Mariam Isa</h4>
+          <p class="font-caption text-caption text-muted">Dermatologist</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── APPOINTMENT CTA BANNER ── -->
+    <section
+      class="my-3xl bg-primary-container rounded-2xl p-2xl text-center shadow-lg relative overflow-hidden fade-up">
+      <!-- Decorative circles -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div class="w-72 h-72 border-[3px] border-white/20 rounded-full absolute -top-36 -left-36"></div>
+        <div class="w-96 h-96 border-[2px] border-white/10 rounded-full absolute -bottom-48 -right-48"></div>
+      </div>
+      <div class="relative z-10 space-y-md">
+        <h2 class="font-h2 text-h2 text-white">Ready to Book Your Appointment?</h2>
+        <p class="font-lead text-[16px] font-light max-w-lg mx-auto" style="color:rgba(255,255,255,0.85)">
+          Experience compassionate, high-end medical care. Schedule your visit today and join East Riffa's premier
+          health center.
+        </p>
+        <div class="pt-md flex flex-wrap gap-md justify-center">
+          <button onclick="openModal()"
+            class="btn btn-solid bg-white text-primary font-label px-2xl py-md rounded-xl shadow-lg tracking-widest uppercase text-[12px]">
+            Book Now
+          </button>
+          <a href="tel:+97317000000"
+            class="btn flex items-center gap-1.5 border-2 border-white text-white font-label px-xl py-md rounded-xl hover:bg-white/10 tracking-widest uppercase text-[12px]">
+            <span class="material-symbols-outlined text-[18px]">call</span> Call Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TESTIMONIALS ── -->
+    <section class="py-3xl">
+      <div class="text-center mb-2xl fade-up">
+        <p class="font-label text-primary tracking-widest uppercase text-[11px] mb-sm">Patient Stories</p>
+        <h2 class="font-h2 text-h2">What Our Patients Say</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+        <div
+          class="card-lift fade-up d-100 bg-white/70 backdrop-blur-xl p-xl rounded-3xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col items-center text-center">
+          <div class="flex gap-1 mb-md">
+            <span class="material-symbols-outlined text-warn text-[20px]"
+              style="font-variation-settings:'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-warn text-[20px]"
+              style="font-variation-settings:'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-warn text-[20px]"
+              style="font-variation-settings:'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-warn text-[20px]"
+              style="font-variation-settings:'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-warn text-[20px]"
+              style="font-variation-settings:'FILL' 1;">star</span>
+          </div>
+          <p class="font-display italic text-[18px] text-muted mb-xl leading-relaxed flex-1">
+            "The level of care and professionalism here is outstanding. I've never felt more at ease at a medical
+            center."
+          </p>
+          <div class="flex items-center gap-sm mt-auto">
+            <div class="w-10 h-10 bg-surface-variant rounded-full flex items-center justify-center">
+              <span class="material-symbols-outlined text-muted">person</span>
+            </div>
+            <div class="text-left">
+              <p class="font-label text-on-surface text-[11px] tracking-wider">Verified Patient</p>
+              <p class="font-caption text-caption text-muted">December 2025</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="card-lift fade-up d-200 bg-white/70 backdrop-blur-xl p-xl rounded-3xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col items-center text-center">
+          <div class="flex gap-1 mb-md">
+            <span class="material-symbols-outlined text-warn text-[20px]"
+              style="font-variation-settings:'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-warn text-[20px]"
+              style="font-variation-settings:'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-warn text-[20px]"
+              style="font-variation-settings:'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-warn text-[20px]"
+              style="font-variation-settings:'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-warn text-[20px]"
+              style="font-variation-settings:'FILL' 1;">star</span>
+          </div>
+          <p class="font-display italic text-[18px] text-muted mb-xl leading-relaxed flex-1">
+            "Dr. Sarah was incredibly patient with my children. The pediatrics team made the whole experience
+            comfortable."
+          </p>
+          <div class="flex items-center gap-sm mt-auto">
+            <div class="w-10 h-10 bg-surface-variant rounded-full flex items-center justify-center">
+              <span class="material-symbols-outlined text-muted">person</span>
+            </div>
+            <div class="text-left">
+              <p class="font-label text-on-surface text-[11px] tracking-wider">Verified Patient</p>
+              <p class="font-caption text-caption text-muted">January 2026</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="card-lift fade-up d-300 bg-white/70 backdrop-blur-xl p-xl rounded-3xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col items-center text-center">
+          <div class="flex gap-1 mb-md">
+            <span class="material-symbols-outlined text-warn text-[20px]"
+              style="font-variation-settings:'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-warn text-[20px]"
+              style="font-variation-settings:'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-warn text-[20px]"
+              style="font-variation-settings:'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-warn text-[20px]"
+              style="font-variation-settings:'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-warn text-[20px]"
+              style="font-variation-settings:'FILL' 1;">star</span>
+          </div>
+          <p class="font-display italic text-[18px] text-muted mb-xl leading-relaxed flex-1">
+            "Convenient location, modern facilities, and genuinely caring staff. Highly recommend for the whole family."
+          </p>
+          <div class="flex items-center gap-sm mt-auto">
+            <div class="w-10 h-10 bg-surface-variant rounded-full flex items-center justify-center">
+              <span class="material-symbols-outlined text-muted">person</span>
+            </div>
+            <div class="text-left">
+              <p class="font-label text-on-surface text-[11px] tracking-wider">Verified Patient</p>
+              <p class="font-caption text-caption text-muted">February 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT & LOCATION ── -->
+    <section id="contact" class="py-3xl grid grid-cols-1 md:grid-cols-2 gap-2xl">
+      <!-- Left: info + map -->
+      <div class="space-y-xl">
+        <div class="fade-up">
+          <p class="font-label text-primary tracking-widest uppercase text-[11px] mb-sm">Get in Touch</p>
+          <h2 class="font-h2 text-h2">Contact &amp; Location</h2>
+        </div>
+
+        <div
+          class="fade-up d-100 bg-white/70 backdrop-blur-xl p-xl rounded-3xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] divide-y divide-border-light">
+          <div class="flex gap-md py-md first:pt-0">
+            <span class="material-symbols-outlined text-primary shrink-0 mt-0.5">location_on</span>
+            <div>
+              <p class="font-label text-primary text-[10px] tracking-widest uppercase mb-1">Address</p>
+              <p class="font-body text-on-surface">Beside Nesto Supermarket,<br />East Riffa, Kingdom of Bahrain</p>
+            </div>
+          </div>
+          <div class="flex gap-md py-md">
+            <span class="material-symbols-outlined text-primary shrink-0 mt-0.5">call</span>
+            <div>
+              <p class="font-label text-primary text-[10px] tracking-widest uppercase mb-1">Phone</p>
+              <a href="tel:+97317000000" class="font-body text-on-surface hover:text-primary transition-colors">+973
+                1700 0000</a>
+            </div>
+          </div>
+          <div class="flex gap-md py-md">
+            <span class="material-symbols-outlined text-primary shrink-0 mt-0.5">mail</span>
+            <div>
+              <p class="font-label text-primary text-[10px] tracking-widest uppercase mb-1">Email</p>
+              <a href="mailto:info@sabrmc.com"
+                class="font-body text-on-surface hover:text-primary transition-colors">info@sabrmc.com</a>
+            </div>
+          </div>
+          <div class="flex gap-md py-md last:pb-0">
+            <span class="material-symbols-outlined text-primary shrink-0 mt-0.5">schedule</span>
+            <div>
+              <p class="font-label text-primary text-[10px] tracking-widest uppercase mb-1">Working Hours</p>
+              <p class="font-body text-on-surface">Open Daily &mdash; 8:00 AM to 10:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="fade-up d-200 rounded-xl overflow-hidden border border-border-light shadow-sm h-56">
+          <iframe class="w-full h-full" style="border:0; filter: saturate(0.85) contrast(1.05);"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=50.5500%2C26.1800%2C50.6200%2C26.2200&layer=mapnik&marker=26.2008%2C50.5950"
+            allowfullscreen loading="lazy" title="Sabr Medical Center Location — East Riffa, Bahrain">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Right: enquiry form -->
+      <div class="fade-up d-200 bg-white p-xl sm:p-2xl rounded-xl border border-border-light shadow-sm">
+        <h3 class="font-h3 text-h3 mb-xl">Enquire Now</h3>
+        <form id="contact-form" class="space-y-md" novalidate>
+          <div>
+            <label class="font-label block mb-1 text-muted uppercase tracking-widest text-[10px]">Full Name *</label>
+            <input type="text" name="name" placeholder="Your full name" class="field" required />
+            <p class="field-err hidden text-error font-caption text-[11px] mt-1">Please enter your name.</p>
+          </div>
+          <div>
+            <label class="font-label block mb-1 text-muted uppercase tracking-widest text-[10px]">Phone Number *</label>
+            <input type="tel" name="phone" placeholder="+973 XXXX XXXX" class="field" required />
+            <p class="field-err hidden text-error font-caption text-[11px] mt-1">Please enter a valid phone number.</p>
+          </div>
+          <div>
+            <label class="font-label block mb-1 text-muted uppercase tracking-widest text-[10px]">Department</label>
+            <select name="department" class="field">
+              <option value="">Select a department</option>
+              <option>General Medicine</option>
+              <option>Dental Care</option>
+              <option>Pediatrics</option>
+              <option>Dermatology</option>
+              <option>OB/GYN</option>
+              <option>Laboratory</option>
+            </select>
+          </div>
+          <div>
+            <label class="font-label block mb-1 text-muted uppercase tracking-widest text-[10px]">Message</label>
+            <textarea name="message" rows="4" placeholder="How can we help you?" class="field resize-none"></textarea>
+          </div>
+          <button type="submit"
+            class="btn btn-solid w-full bg-primary text-on-primary font-label py-3 rounded-xl shadow-sm tracking-widest uppercase text-[12px]">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+  <footer class="border-t border-white/50 bg-white/40 backdrop-blur-lg mt-3xl">
+    <div class="max-w-container mx-auto px-6 py-16 flex flex-col md:flex-row justify-between items-start gap-8">
+      <!-- Brand -->
+      <div class="max-w-xs">
+        <div class="flex items-center gap-2 mb-md">
+          <div class="w-9 h-9 bg-primary rounded-xl flex items-center justify-center shadow-sm">
+            <span class="material-symbols-outlined text-white text-[20px]"
+              style="font-variation-settings:'FILL' 1;">medical_services</span>
+          </div>
+          <span class="font-display font-bold text-primary text-[18px] tracking-tight">Sabr Medical Center</span>
+        </div>
+        <p class="font-display italic text-muted text-sm leading-relaxed">
+          "Providing clinical excellence and compassionate care to the East Riffa community."
+        </p>
+        <div class="flex gap-sm mt-md">
+          <a href="tel:+97317000000" aria-label="Call Sabr Medical Center"
+            class="btn w-10 h-10 bg-teal-light rounded-full flex items-center justify-center hover:bg-primary group">
+            <span
+              class="material-symbols-outlined text-primary group-hover:text-white text-[18px] transition-colors">call</span>
+          </a>
+          <a href="mailto:info@sabrmc.com" aria-label="Email Sabr Medical Center"
+            class="btn w-10 h-10 bg-teal-light rounded-full flex items-center justify-center hover:bg-primary group">
+            <span
+              class="material-symbols-outlined text-primary group-hover:text-white text-[18px] transition-colors">mail</span>
+          </a>
+          <a href="#contact" aria-label="Find us on map"
+            class="btn w-10 h-10 bg-teal-light rounded-full flex items-center justify-center hover:bg-primary group">
+            <span
+              class="material-symbols-outlined text-primary group-hover:text-white text-[18px] transition-colors">location_on</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="grid grid-cols-2 gap-xl">
+        <div>
+          <h5 class="font-display font-bold text-primary mb-md text-[15px]">Quick Links</h5>
+          <ul class="space-y-sm">
+            <li><a href="#home" class="font-body text-muted text-sm hover:text-primary transition-colors">Home</a></li>
+            <li><a href="#services"
+                class="font-body text-muted text-sm hover:text-primary transition-colors">Services</a></li>
+            <li><a href="#doctors" class="font-body text-muted text-sm hover:text-primary transition-colors">Doctors</a>
+            </li>
+            <li><a href="#about" class="font-body text-muted text-sm hover:text-primary transition-colors">About Us</a>
+            </li>
+            <li><a href="#contact" class="font-body text-muted text-sm hover:text-primary transition-colors">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-display font-bold text-primary mb-md text-[15px]">Specialties</h5>
+          <ul class="space-y-sm">
+            <li><button onclick="openModal('General Medicine')"
+                class="btn font-body text-muted text-sm hover:text-primary transition-colors text-left">General
+                Medicine</button></li>
+            <li><button onclick="openModal('Dental Care')"
+                class="btn font-body text-muted text-sm hover:text-primary transition-colors text-left">Dental
+                Care</button></li>
+            <li><button onclick="openModal('Pediatrics')"
+                class="btn font-body text-muted text-sm hover:text-primary transition-colors text-left">Pediatrics</button>
+            </li>
+            <li><button onclick="openModal('Dermatology')"
+                class="btn font-body text-muted text-sm hover:text-primary transition-colors text-left">Dermatology</button>
+            </li>
+            <li><button onclick="openModal('OB/GYN')"
+                class="btn font-body text-muted text-sm hover:text-primary transition-colors text-left">OB/GYN</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="max-w-container mx-auto px-6 pb-8 pt-6 border-t border-border-light flex flex-col sm:flex-row justify-between items-center gap-3">
+      <p class="font-body text-muted text-sm">© 2026 Sabr Medical Center. All rights reserved.</p>
+      <div class="flex gap-md">
+        <a href="#" class="font-body text-muted text-sm hover:text-primary transition-colors">Privacy Policy</a>
+        <a href="#" class="font-body text-muted text-sm hover:text-primary transition-colors">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════ -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ── Mobile Menu ──────────────────────── */
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+      let menuOpen = false;
+
+      function openMobile() {
+        menuOpen = true;
+        hamburger.classList.add('open');
+        mobileMenu.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+      }
+
+      function closeMobile() {
+        menuOpen = false;
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+
+      hamburger.addEventListener('click', () => menuOpen ? closeMobile() : openMobile());
+
+      window.closeMobile = closeMobile;
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768 && menuOpen) closeMobile();
+      });
+
+      /* ── Booking Modal ────────────────────── */
+      const modal = document.getElementById('booking-modal');
+      const bDept = document.getElementById('b-dept');
+      const bNotes = document.getElementById('b-notes');
+
+      function openModal(dept = '', doctor = '') {
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        if (dept) bDept.value = dept;
+        if (doctor) {
+          bNotes.value = 'Requesting appointment with ' + doctor + '.';
+        }
+      }
+
+      function closeModal() {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      window.openModal = openModal;
+      window.closeModal = closeModal;
+
+      document.getElementById('close-modal').addEventListener('click', closeModal);
+      modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+      /* Keyboard accessibility for modal */
+      modal.addEventListener('keydown', e => {
+        if (e.key !== 'Tab') return;
+        const focusable = modal.querySelectorAll('button, input, select, textarea, a[href]');
+        const first = focusable[0], last = focusable[focusable.length - 1];
+        if (e.shiftKey) {
+          if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+        } else {
+          if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      });
+
+      /* ── Toast ────────────────────────────── */
+      let toastTimer;
+      function showToast(msg, duration = 4500) {
+        const toast = document.getElementById('toast');
+        document.getElementById('toast-msg').textContent = msg;
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(hideToast, duration);
+      }
+
+      function hideToast() {
+        document.getElementById('toast').classList.remove('show');
+      }
+
+      window.showToast = showToast;
+      window.hideToast = hideToast;
+
+      /* ── Form: Booking ────────────────────── */
+      document.getElementById('booking-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = this.querySelector('[name="name"]').value.trim();
+        const phone = this.querySelector('[name="phone"]').value.trim();
+        const dept = this.querySelector('[name="department"]').value;
+
+        let valid = true;
+        this.querySelectorAll('.field-err').forEach(el => el.classList.add('hidden'));
+        this.querySelectorAll('.field').forEach(el => el.classList.remove('error'));
+
+        const nameF = this.querySelector('[name="name"]');
+        const phoneF = this.querySelector('[name="phone"]');
+        const deptF = this.querySelector('[name="department"]');
+
+        if (!name) { nameF.classList.add('error'); nameF.nextElementSibling.classList.remove('hidden'); if (valid) nameF.focus(); valid = false; }
+        if (!phone) { phoneF.classList.add('error'); phoneF.nextElementSibling.classList.remove('hidden'); if (valid) phoneF.focus(); valid = false; }
+        if (!dept) { deptF.classList.add('error'); deptF.nextElementSibling.classList.remove('hidden'); if (valid) deptF.focus(); valid = false; }
+
+        if (!valid) return;
+
+        closeModal();
+        this.reset();
+        setTimeout(() => showToast("Appointment request sent! We'll confirm within 24 hours."), 350);
+      });
+
+      /* ── Form: Contact ────────────────────── */
+      document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = this.querySelector('[name="name"]').value.trim();
+        const phone = this.querySelector('[name="phone"]').value.trim();
+
+        let valid = true;
+        this.querySelectorAll('.field-err').forEach(el => el.classList.add('hidden'));
+        this.querySelectorAll('.field').forEach(el => el.classList.remove('error'));
+
+        const nameF = this.querySelector('[name="name"]');
+        const phoneF = this.querySelector('[name="phone"]');
+
+        if (!name) { nameF.classList.add('error'); nameF.nextElementSibling.classList.remove('hidden'); if (valid) nameF.focus(); valid = false; }
+        if (!phone) { phoneF.classList.add('error'); phoneF.nextElementSibling.classList.remove('hidden'); if (valid) phoneF.focus(); valid = false; }
+
+        if (!valid) return;
+
+        this.reset();
+        showToast("Message sent! We'll get back to you soon.");
+      });
+
+      /* ── Scroll Animations ────────────────── */
+      const fadeEls = document.querySelectorAll('.fade-up');
+      const fadeObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+
+      fadeEls.forEach(el => fadeObs.observe(el));
+
+      /* ── Active Nav Highlighting ──────────── */
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('header .nav-link');
+
+      const navObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const id = entry.target.id;
+          navLinks.forEach(link => {
+            const active = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', active);
+            link.classList.toggle('text-primary', active);
+            link.classList.toggle('text-muted', !active);
+          });
+        });
+      }, { threshold: 0.35, rootMargin: '-10% 0px -60% 0px' });
+
+      sections.forEach(s => navObs.observe(s));
+
+      /* ── Navbar shadow on scroll ──────────── */
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('shadow-md', window.scrollY > 40);
+      }, { passive: true });
+
+      /* ── Service card keyboard click ─────── */
+      document.querySelectorAll('[role="button"]').forEach(el => {
+        el.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+        });
+      });
+
+    })();
+  </script>
+</body>
+
+</html>
